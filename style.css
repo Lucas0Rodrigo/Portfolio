@@ -1,6 +1,6 @@
 /* RESET E FONTE */
 *{
-    color: black;
+    color: #ffffff;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -24,7 +24,7 @@ header{
     padding: 12px 0px;
     position: fixed;
     width: 100%;
-    background-color: #038C7F;
+    background-color: #0c148d;
     z-index: 9999;;
 }   
 header nav ul{
@@ -62,7 +62,7 @@ header nav ul li a:hover{
     border-radius: 20px;
     margin-bottom: 20px;
     padding-top: 30px;
-    background-color: #038C7F;
+    background-color: #0c148d;
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -72,15 +72,15 @@ header nav ul li a:hover{
     border-radius: 20px;
     margin-bottom: 20px;
     padding-top: 17px;
-    background-color: #038C7F;
+    background-color: #0c148d;
     margin-left: 15px;
     margin-right: 15px;
 }
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #038C7F;
-    color: #000000;
+    background-color: #0c148d;
+    color: #ffffff;
     font-family: "montserrat", sans-serif;
 }
 
@@ -141,7 +141,7 @@ footer {
     font-weight: lighter;
 }
 .titulo{
-    color: #000000;
+    color: #ffffff;
     font-size: 50px;
     font-style: italic;
     text-align: center;
@@ -149,14 +149,14 @@ footer {
     font-weight: lighter;
 }
 .titulo2{
-    color: #000000;
+    color: #ffffff;
     font-size: 30px;
     font-style: italic;
     text-align: center;
     font-family: "Montserrat", sans-serif;
 }
 .subtitulo{
-    color: #000000;
+    color: #ffffff;
     font-size: 30px;
     font-style: italic;
     text-align: center;
@@ -266,7 +266,7 @@ footer {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #ffffff;
-    background-color: #038C7F;
+    background-color: #0c148d;
     padding: 12px 20px;
     border-radius: 10px;
     text-align: center;
@@ -276,7 +276,7 @@ footer {
 
 .btn-visitar:hover {
     color: #ffffff;
-    background-color: #025951;
+    background-color: #14053e;
     transform: scale(1.03);
 }
 
