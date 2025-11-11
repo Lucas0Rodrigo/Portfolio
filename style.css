@@ -29,7 +29,11 @@ header{
     z-index: 9999;;
     display: flex;
     justify-content: space-around;
-}   
+}
+header nav{
+    display: flex;
+    align-items: center;
+}
 header nav ul{
     list-style: none;
     text-align: center;
@@ -105,7 +109,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-flow: row;
-    align-items: center;
+    ms: center;
 }
 .responsive-img {
     width: 100%;
@@ -439,6 +443,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
