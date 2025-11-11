@@ -67,8 +67,15 @@ header h1 {
   font-family: "Montserrat";
   text-decoration: none;
 }
-header h1 a {
+header h1,
+a {
+  color: #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 /* =========================
@@ -447,6 +454,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
