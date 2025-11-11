@@ -50,6 +50,12 @@ header nav ul li a:hover{
     color: rgb(85, 85, 85);
     transition: 2s;
 }
+header h1 {
+  font-size: 1.8em;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: "Montserrat";
+}
 
 /* =========================
    CORPO E ESTRUTURA
@@ -427,5 +433,6 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
