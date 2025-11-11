@@ -20,34 +20,57 @@ html{
 /* =========================
    HEADER
    ========================= */
-header{
-    padding: 12px 0px;
-    position: fixed;
-    width: 100%;
-    background-color: #0c148d;
-    z-index: 9999;;
-}   
-header nav ul{
-    list-style: none;
-    text-align: center;
 }
-header nav ul li{
-    display: inline;
+
+header {
+  background-color: #0c148d;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-header nav ul li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    font-family: 'montserrat', sans-serif;  
-    padding: 2px 25px;
-    display: inline-block;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    transition: 2s;
+
+header nav {
+  display: flex;
+  align-items: center;
 }
-header nav ul li a:hover{
-    color: rgb(85, 85, 85);
-    transition: 2s;
+
+header nav a {
+  margin-right: 1.3em;
+  font-size: 1.2em;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header h1 {
+  font-size: 1.8em;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+header h1,
+a {
+  color: #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /* =========================
@@ -426,3 +449,4 @@ footer {
         gap: 0.5rem;
     }
 }
+
