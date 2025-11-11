@@ -16,6 +16,9 @@ html{
     font-weight: weight;
     font-style: normal;
   }
+main{
+    margin: 20 0 0 0;
+}
 
 /* =========================
    HEADER
@@ -454,6 +457,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
