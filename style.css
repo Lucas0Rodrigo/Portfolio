@@ -57,6 +57,9 @@ header h1 {
   font-family: "Montserrat";
   text-decoration: none;
 }
+header h1 a {
+  text-decoration: none;
+}
 
 /* =========================
    CORPO E ESTRUTURA
@@ -434,6 +437,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
