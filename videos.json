@@ -9,6 +9,21 @@
           "descricao": "Correção de cor: ajustes de exposição e WB para padronizar takes e obter imagem limpa e natural. Projeto sem áudio para foco visual."
         }
       ]
+    },
+    {
+      "titulo": "ArtChannel - Premiere & Photoshop",
+      "videos": [
+        {
+          "link": "https://youtu.be/Z4csbYXZCfw",
+          "titulo_video": "Transformando Arte em Animação – Meu Processo no Photoshop + Premiere",
+          "descricao": "Animação de arte: uso de arquivos PSD e transições para criar um vídeo dinâmico e sincronizado com a música. Projeto focado em movimento e apresentação visual."
+        },
+        {
+          "link": "https://youtube.com/shorts/DNCoTun1XNM",
+          "titulo_video": "Arte em Movimento",
+          "descricao": "Animação de arte: uso de arquivos PSD e transições para criar um vídeo dinâmico e sincronizado com a música. Projeto focado em movimento e apresentação visual. (Versão Shorts)"
+        }
+      ]
     }
   ]
 }
