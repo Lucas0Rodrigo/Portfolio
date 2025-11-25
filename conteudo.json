@@ -1,0 +1,21 @@
+{
+  "projetos": [
+    {
+      "titulo": "E-COMMERCE",
+      "imagens": [
+        {
+          "img": "img/img1.jpg",
+          "alt": "Print do Site ELITE Motors"
+        },
+        {
+          "img": "img/img4.jpg",
+          "alt": "Print do Site ELITE Motors"
+        },
+        {
+          "img": "img/img5.jpg",
+          "alt": "Print do Site ELITE Motors"
+        }
+      ]
+    }
+  ]
+}
