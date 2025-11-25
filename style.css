@@ -158,6 +158,25 @@ footer {
     margin-bottom: 20px;
 }
 
+.video .textodescri h2,
+.video .textodescri p,
+.video .textodescri a {
+    color: #1a1a1a !important;
+    text-shadow: none;
+    text-decoration: none !important;
+}
+.video .textodescri a {
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.video .textodescri a:hover {
+    color: #1a1a1a !important;
+    text-decoration: none;
+    transform: scale(1.03);
+}
+
 /* =========================
    TEXTO E TÍTULOS
    ========================= */
@@ -458,6 +477,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
