@@ -172,6 +172,9 @@ footer {
     text-align: center;
     font-weight: lighter;
 }
+.textodescri h1, p{
+    color: #000 !important
+}
 .titulo{
     color: #ffffff;
     font-size: 50px;
@@ -458,6 +461,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
