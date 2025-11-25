@@ -1,6 +1,44 @@
 {
   "projetos": [
     {
+      "imagens": [
+        {
+          "img": "img/img2.jpg",
+          "alt": "Site de Receitas - Página Principal"
+        },
+        {
+          "img": "img/img6.jpg",
+          "alt": "Site de Receitas - Página de Receita"
+        },
+        {
+          "img": "img/img7.jpg",
+          "alt": "Site de Receitas - Página de Receita"
+        },
+        {
+          "img": "img/img8.jpg",
+          "alt": "Site de Receitas - Página de Receita"
+        }
+      ],
+      "titulo": "Meu Primeiro Site -  Site de Receitas"
+    },
+    {
+      "titulo": "Site Tema Livre - Engenharia Aeronáutica",
+      "imagens": [
+        {
+          "img": "img/img3.jpg",
+          "alt": "Site Engenharia Aeronáutica -  Banner"
+        },
+        {
+          "img": "img/img10.jpg",
+          "alt": "Site Engenharia Aeronáutica -  Carrossel"
+        },
+        {
+          "img": "img/img9.jpg",
+          "alt": "Site Engenharia Aeronáutica -  Informações"
+        }
+      ]
+    },
+    {
       "titulo": "E-COMMERCE",
       "imagens": [
         {
@@ -16,6 +54,53 @@
           "alt": "Print do Site ELITE Motors"
         }
       ]
+    },
+    {
+      "imagens": [
+        {
+          "img": "img/Logo Bennet 1.png",
+          "alt": "Bennet Ascend - Logo"
+        },
+        {
+          "img": "img/Logo Bennet 2.png",
+          "alt": "Bennet Ascend - Logo"
+        },
+        {
+          "img": "img/Logo Bennet 4.png",
+          "alt": "Bennet Ascend - Logo"
+        }
+      ],
+      "titulo": "Projeto Benett Ascend"
+    },
+    {
+      "imagens": [
+        {
+          "img": "img/Blu-Ray.png",
+          "alt": "Remake Jurassic Park - Capa de CD"
+        },
+        {
+          "img": "img/Cartaz Cinema.png",
+          "alt": "Remake Jurassic Park -  Flyer de Cinema"
+        },
+        {
+          "img": "img/Capa Bluraypng.png",
+          "alt": "Capa de BlueRay"
+        }
+      ],
+      "titulo": "Remake: Jurassic Park"
+    },
+    {
+      "imagens": [
+        {
+          "img": "img/Cores.png",
+          "alt": "Paletas de Cores - Cores Base"
+        },
+        {
+          "img": "img/Desenho1.png",
+          "alt": "Paleta de Cores - Cores Usadas"
+        }
+      ],
+      "titulo": "Paletas de Cores"
     }
   ]
 }
