@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "img"
+
+collections:
+  - name: "dados"
+    label: "Conteúdo do Site"
+    files:
+      - name: "portfolio"
+        label: "Gerenciar Projetos"
+        file: "conteudo.json"
+        fields:
+          - label: "Meus Projetos"
+            name: "projetos"
+            widget: "list"
+            summary: "{{titulo}}" # Mostra o nome do projeto na lista do admin
+            fields:
+              - {label: "Nome do Projeto (Ex: E-commerce)", name: "titulo", widget: "string"}
+              - label: "Imagens deste Projeto"
+                name: "imagens"
+                widget: "list"
+                fields:
+                  - {label: "Imagem", name: "img", widget: "image"}
+                  - {label: "Descrição (Alt)", name: "alt", widget: "string"}
