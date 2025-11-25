@@ -1,8 +1,6 @@
-#  === Imagens ===
-
 backend:
   name: git-gateway
-  branch: main
+  branch: main # Se sua branch principal for master, mude aqui
 
 media_folder: "img"
 public_folder: "img"
@@ -12,42 +10,10 @@ collections:
     label: "Conteúdo do Site"
     files:
       - name: "portfolio"
-        label: "Gerenciar Projetos"
+        label: "Gerenciar Conteúdo"
         file: "conteudo.json"
         fields:
-          - label: "Meus Projetos"
-            name: "projetos"
-            widget: "list"
-            summary: "{{titulo}}" # Mostra o nome do projeto na lista do admin
-            fields:
-              - {label: "Nome do Projeto (Ex: E-commerce)", name: "titulo", widget: "string"}
-              - label: "Imagens deste Projeto"
-                name: "imagens"
-                widget: "list"
-                fields:
-                  - {label: "Imagem", name: "img", widget: "image"}
-                  - {label: "Descrição (Alt)", name: "alt", widget: "string"}
-
-
-
-# === Vídeos ===
-
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "img"
-public_folder: "img"
-
-collections:
-  - name: "dados"
-    label: "Conteúdo do Site"
-    files:
-      - name: "portfolio"
-        label: "Gerenciar Todo o Conteúdo"
-        file: "conteudo.json"
-        fields:
-          # --- SEÇÃO DE FOTOS (JÁ EXISTIA) ---
+          # --- SEÇÃO 1: FOTOS (Já configurado) ---
           - label: "PROJETOS DE FOTOS"
             name: "projetos"
             widget: "list"
@@ -61,17 +27,17 @@ collections:
                   - {label: "Imagem", name: "img", widget: "image"}
                   - {label: "Descrição (Alt)", name: "alt", widget: "string"}
           
-          # --- SEÇÃO DE VÍDEOS (NOVA) ---
+          # --- SEÇÃO 2: VÍDEOS (Novo) ---
           - label: "PROJETOS DE VÍDEOS"
             name: "projetos_videos"
             widget: "list"
             summary: "🎬 {{titulo}}"
             fields:
-              - {label: "Categoria/Título (Ex: Programação)", name: "titulo", widget: "string"}
+              - {label: "Categoria (Ex: Programação)", name: "titulo", widget: "string"}
               - label: "Lista de Vídeos"
                 name: "videos"
                 widget: "list"
                 fields:
-                  - {label: "Link do YouTube", name: "link", widget: "string", hint: "Cole o link completo do vídeo aqui"}
-                  - {label: "Título do Vídeo (H2)", name: "titulo_video", widget: "string"}
+                  - {label: "Link do YouTube", name: "link", widget: "string", hint: "Cole o link completo (Ex: https://www.youtube.com/watch?v=...)"}
+                  - {label: "Título do Vídeo", name: "titulo_video", widget: "string"}
                   - {label: "Descrição (Texto)", name: "descricao", widget: "text"}
