@@ -123,12 +123,16 @@ footer {
     ms: center;
 }
 .responsive-img {
-    width: 100%;
-    height: auto;
-}
-.responsive-img2 {
-    width: 70%;
-    height: auto;
+    display: block;       /* Permite centralizar */
+    width: auto;          /* Largura natural da imagem */
+    max-width: 100%;      /* TRAVA: Nunca deixa a imagem vazar do card */
+    max-height: 250px;    /* TRAVA: Impede que cartazes fiquem gigantes na vertical */
+    height: auto;         /* Mantém a proporção */
+    margin: 0 auto 15px auto; /* Centraliza a imagem no meio do card */
+    
+    /* Suas bordas antigas */
+    border-radius: 10px;
+    border: 1px solid #eee;
 }
 .responsive-img3 {
     width: 130px;
@@ -454,6 +458,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
