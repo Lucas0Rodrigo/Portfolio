@@ -172,9 +172,6 @@ footer {
     text-align: center;
     font-weight: lighter;
 }
-.textodescri h1, p{
-    color: #000 !important
-}
 .titulo{
     color: #ffffff;
     font-size: 50px;
@@ -249,7 +246,7 @@ footer {
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     position: absolute;
-    top: calc(50% + 180px);
+    top: calc(50% + 270px)
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -461,6 +458,7 @@ footer {
         gap: 0.5rem;
     }
 }
+
 
 
 
