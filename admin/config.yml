@@ -1,3 +1,5 @@
+#  === Imagens ===
+
 backend:
   name: git-gateway
   branch: main
@@ -25,3 +27,51 @@ collections:
                 fields:
                   - {label: "Imagem", name: "img", widget: "image"}
                   - {label: "Descrição (Alt)", name: "alt", widget: "string"}
+
+
+
+# === Vídeos ===
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "img"
+
+collections:
+  - name: "dados"
+    label: "Conteúdo do Site"
+    files:
+      - name: "portfolio"
+        label: "Gerenciar Todo o Conteúdo"
+        file: "conteudo.json"
+        fields:
+          # --- SEÇÃO DE FOTOS (JÁ EXISTIA) ---
+          - label: "PROJETOS DE FOTOS"
+            name: "projetos"
+            widget: "list"
+            summary: "📸 {{titulo}}"
+            fields:
+              - {label: "Nome do Projeto (Ex: E-commerce)", name: "titulo", widget: "string"}
+              - label: "Imagens deste Projeto"
+                name: "imagens"
+                widget: "list"
+                fields:
+                  - {label: "Imagem", name: "img", widget: "image"}
+                  - {label: "Descrição (Alt)", name: "alt", widget: "string"}
+          
+          # --- SEÇÃO DE VÍDEOS (NOVA) ---
+          - label: "PROJETOS DE VÍDEOS"
+            name: "projetos_videos"
+            widget: "list"
+            summary: "🎬 {{titulo}}"
+            fields:
+              - {label: "Categoria/Título (Ex: Programação)", name: "titulo", widget: "string"}
+              - label: "Lista de Vídeos"
+                name: "videos"
+                widget: "list"
+                fields:
+                  - {label: "Link do YouTube", name: "link", widget: "string", hint: "Cole o link completo do vídeo aqui"}
+                  - {label: "Título do Vídeo (H2)", name: "titulo_video", widget: "string"}
+                  - {label: "Descrição (Texto)", name: "descricao", widget: "text"}
