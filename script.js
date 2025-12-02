@@ -128,40 +128,49 @@ async function carregarTudo() {
         }
     }
 
-    // --- PARTE C: CARREGAR SITES (sites.json) [NOVO] ---
+    // --- PARTE C: CARREGAR SITES (sites.json) - COM LOOP DE 3 EM 3 ---
     const palcoSites = document.getElementById('palco-sites');
     if (palcoSites) {
         try {
             const resSites = await fetch('sites.json');
             if(resSites.ok) {
                 const dadosSites = await resSites.json();
-                if(dadosSites.lista_sites) {
+                const lista = dadosSites.lista_sites;
+
+                if(lista) {
                     palcoSites.innerHTML = '';
                     
-                    // Cria uma única seção galeria para colocar todos os sites
-                    const sectionGaleria = document.createElement('section');
-                    sectionGaleria.className = 'galeria';
+                    // AQUI ESTÁ A MÁGICA: Loop que pula de 3 em 3
+                    for (let i = 0; i < lista.length; i += 3) {
+                        
+                        // Cria uma NOVA section para cada grupo de 3 sites
+                        const sectionGaleria = document.createElement('section');
+                        sectionGaleria.className = 'galeria';
 
-                    dadosSites.lista_sites.forEach(site => {
-                        const article = document.createElement('article');
-                        article.className = 'boximg'; // Classes do seu CSS original
+                        // Pega os 3 sites da vez (ou o que sobrar)
+                        const grupoDeTres = lista.slice(i, i + 3);
 
-                        // Ajuste de imagem
-                        let caminhoImg = site.img;
-                        if (!caminhoImg.startsWith('http') && !caminhoImg.startsWith('./') && !caminhoImg.startsWith('/')) {
-                             caminhoImg = './' + caminhoImg;
-                        }
+                        grupoDeTres.forEach(site => {
+                            const article = document.createElement('article');
+                            article.className = 'boximg'; // Seu CSS vai cuidar de esticar se estiver sozinho
 
-                        article.innerHTML = `
-                            <img class="responsive-img" src="${caminhoImg}" alt="Preview do ${site.titulo}">
-                            <h3 class="subtitulo">${site.titulo}</h3>
-                            <p class="textodescri">${site.descricao}</p>
-                            <a href="${site.link}" target="_blank" class="btn-visitar">Visitar Site</a>
-                        `;
-                        sectionGaleria.appendChild(article);
-                    });
+                            let caminhoImg = site.img;
+                            if (!caminhoImg.startsWith('http') && !caminhoImg.startsWith('./') && !caminhoImg.startsWith('/')) {
+                                 caminhoImg = './' + caminhoImg;
+                            }
 
-                    palcoSites.appendChild(sectionGaleria);
+                            article.innerHTML = `
+                                <img class="responsive-img" src="${caminhoImg}" alt="Preview do ${site.titulo}">
+                                <h3 class="subtitulo">${site.titulo}</h3>
+                                <p class="textodescri">${site.descricao}</p>
+                                <a href="${site.link}" target="_blank" class="btn-visitar">Visitar Site</a>
+                            `;
+                            sectionGaleria.appendChild(article);
+                        });
+
+                        // Coloca a section no site
+                        palcoSites.appendChild(sectionGaleria);
+                    }
                 }
             }
         } catch (erro) {
