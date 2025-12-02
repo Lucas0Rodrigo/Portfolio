@@ -48,3 +48,21 @@ collections:
                   - {label: "Link do YouTube", name: "link", widget: "string"}
                   - {label: "Título do Vídeo", name: "titulo_video", widget: "string"}
                   - {label: "Descrição", name: "descricao", widget: "text"}
+
+  # === COLEÇÃO 3: SITES (NOVO) ===
+  - name: "sites_colecao"
+    label: "💻 Gerenciar SITES"
+    files:
+      - name: "arquivo_sites"
+        label: "Editar Lista de Sites"
+        file: "sites.json"
+        fields:
+          - label: "Meus Sites"
+            name: "lista_sites"
+            widget: "list"
+            summary: "🌐 {{titulo}}"
+            fields:
+              - {label: "Nome do Site", name: "titulo", widget: "string"}
+              - {label: "Print/Imagem", name: "img", widget: "image"}
+              - {label: "Aviso/Descrição (Ex: Não funciona no celular)", name: "descricao", widget: "string"}
+              - {label: "Link do Site", name: "link", widget: "string"}
