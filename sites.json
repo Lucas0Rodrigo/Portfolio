@@ -1,0 +1,64 @@
+{
+  "lista_sites": [
+    {
+      "titulo": "Meu 1° Site: Site de Receitas",
+      "img": "img site/receita.png",
+      "descricao": "📵ESTE SITE PODE NÃO FUNCIONAR MUITO BEM EM DISPOSITIVOS MÓVEIS📵",
+      "link": "https://lucas0rodrigo.github.io/Site-de-Receitas/index.html"
+    },
+    {
+      "titulo": "Mostruario de Cidades",
+      "img": "img site/cidade.png",
+      "descricao": "📵ESTE SITE PODE NÃO FUNCIONAR MUITO BEM EM DISPOSITIVOS MÓVEIS📵",
+      "link": "https://lucas0rodrigo.github.io/Cidades/"
+    },
+    {
+      "titulo": "E-Commerce",
+      "img": "img site/elite.png",
+      "descricao": "📵ESTE SITE PODE NÃO FUNCIONAR MUITO BEM EM DISPOSITIVOS MÓVEIS📵",
+      "link": "https://lucas0rodrigo.github.io/Ecommerce/"
+    },
+    {
+      "titulo": "Engenharia Aeronáutica",
+      "img": "img site/eng.png",
+      "descricao": "📵ESTE SITE PODE NÃO FUNCIONAR MUITO BEM EM DISPOSITIVOS MÓVEIS📵",
+      "link": "https://lucas0rodrigo.github.io/EngAeronautica/"
+    },
+    {
+      "titulo": "Arraiá CE208",
+      "img": "img site/arraia.png",
+      "descricao": "📱ESTE SITE FUNCIONA BEM EM DISPOSITIVOS MÓVEIS📱",
+      "link": "https://lucas0rodrigo.github.io/FestaJuninaSesi/"
+    },
+    {
+      "titulo": "E-Commerce (Doces)",
+      "img": "img site/ded.png",
+      "descricao": "📱ESTE SITE FUNCIONA BEM EM DISPOSITIVOS MÓVEIS📱",
+      "link": "https://lucas0rodrigo.github.io/DoceseDelicias/"
+    },
+    {
+      "titulo": "Google Personalizado - SENAI 25 ANOS",
+      "img": "img site/google.png",
+      "descricao": "📵ESTE SITE PODE NÃO FUNCIONAR MUITO BEM EM DISPOSITIVOS MÓVEIS📵",
+      "link": "https://lucas0rodrigo.github.io/Google/"
+    },
+    {
+      "titulo": "Site da Gincana - SESI GAMES 2025",
+      "img": "img site/gincana.png",
+      "descricao": "📱ESTE SITE FUNCIONA BEM EM DISPOSITIVOS MÓVEIS📱",
+      "link": "https://lucas0rodrigo.github.io/EquipeGincana/"
+    },
+    {
+      "titulo": "Site Guia - Tipos de Câmeras",
+      "img": "img site/cameras.png",
+      "descricao": "📵ESTE SITE PODE NÃO FUNCIONAR MUITO BEM EM DISPOSITIVOS MÓVEIS📵",
+      "link": "https://lucas0rodrigo.github.io/Cameras/"
+    },
+    {
+      "titulo": "Site Hotel Terra Madre",
+      "img": "img site/sitehotel.png",
+      "descricao": "📱ESTE SITE FUNCIONA BEM EM DISPOSITIVOS MÓVEIS📱",
+      "link": "https://lucas0rodrigo.github.io/HotelTerraMadre"
+    }
+  ]
+}
