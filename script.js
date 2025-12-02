@@ -1,5 +1,5 @@
 /* ==========================================
-   FUNÇÃO 1: JANELA MODAL (FOTOS) - Não mudou nada
+   FUNÇÃO 1: JANELA MODAL (FOTOS)
    ========================================== */
 function cliqueModal(img) {
     const janelaModal = document.getElementById('janelaModal');
@@ -28,7 +28,7 @@ function cliqueModal(img) {
 }
 
 /* ==========================================
-   FUNÇÃO AUXILIAR: PEGAR ID DO YOUTUBE - Não mudou nada
+   FUNÇÃO AUXILIAR: PEGAR ID DO YOUTUBE
    ========================================== */
 function extrairIDYoutube(url) {
     if(!url) return null;
@@ -38,31 +38,26 @@ function extrairIDYoutube(url) {
 }
 
 /* ==========================================
-   FUNÇÃO 2: AUTOMATIZAÇÃO CORRIGIDA (LÊ 2 ARQUIVOS)
+   FUNÇÃO 2: AUTOMATIZAÇÃO GERAL (FOTOS, VÍDEOS E SITES)
    ========================================== */
 
 async function carregarTudo() {
     
-    // --- PARTE A: CARREGAR FOTOS (Lê fotos.json) ---
+    // --- PARTE A: CARREGAR FOTOS (fotos.json) ---
     const palcoFotos = document.getElementById('palco-portfolio');
-    
-    // Só tenta carregar se o palco existir na página
     if (palcoFotos) {
         try {
-            const resFotos = await fetch('fotos.json'); // <--- MUDANÇA AQUI
+            const resFotos = await fetch('fotos.json');
             if(resFotos.ok) {
                 const dadosFotos = await resFotos.json();
-                
                 if(dadosFotos.projetos) {
                     palcoFotos.innerHTML = '';
                     dadosFotos.projetos.forEach(projeto => {
-                        // Título
                         const sectionTitulo = document.createElement('section');
                         sectionTitulo.className = 'subbox';
                         sectionTitulo.innerHTML = `<h2 class="subtitulo">${projeto.titulo}</h2>`;
                         palcoFotos.appendChild(sectionTitulo);
 
-                        // Galeria
                         const sectionGaleria = document.createElement('section');
                         sectionGaleria.className = 'galeria';
                         
@@ -85,24 +80,19 @@ async function carregarTudo() {
                         palcoFotos.appendChild(sectionGaleria);
                     });
                 }
-            } else {
-                console.log("Arquivo fotos.json não encontrado ou vazio.");
             }
         } catch (erro) {
             console.error("Erro ao carregar fotos:", erro);
         }
     }
 
-    // --- PARTE B: CARREGAR VÍDEOS (Lê videos.json) ---
+    // --- PARTE B: CARREGAR VÍDEOS (videos.json) ---
     const palcoVideos = document.getElementById('palco-videos');
-    
-    // Só tenta carregar se o palco de vídeos existir na página
     if (palcoVideos) {
         try {
-            const resVideos = await fetch('videos.json'); // <--- MUDANÇA AQUI
+            const resVideos = await fetch('videos.json');
             if(resVideos.ok) {
                 const dadosVideos = await resVideos.json();
-                
                 if(dadosVideos.projetos_videos) {
                     palcoVideos.innerHTML = '';
                     dadosVideos.projetos_videos.forEach(grupo => {
@@ -118,24 +108,12 @@ async function carregarTudo() {
                                 const videoID = extrairIDYoutube(video.link);
                                 const sectionVideo = document.createElement('section');
                                 sectionVideo.className = 'video';
-                                
                                 sectionVideo.innerHTML = `
                                     <article>
-                                        <iframe 
-                                            width="100%" height="380" 
-                                            src="https://www.youtube.com/embed/${videoID}" 
-                                            title="${video.titulo_video}" 
-                                            frameborder="0" allowfullscreen
-                                            style="border-radius: 10px; max-width: 600px; margin: 0 auto; display: block;"
-                                        ></iframe>
+                                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/${videoID}" title="${video.titulo_video}" frameborder="0" allowfullscreen style="border-radius: 10px; max-width: 600px; margin: 0 auto; display: block;"></iframe>
                                         <aside class="textodescri">
                                             <h2>${video.titulo_video}</h2>
-                                            <p>
-                                                <a href="${video.link}" target="_blank">
-                                                    ${video.descricao} 
-                                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8em; margin-left: 5px;"></i>
-                                                </a>
-                                            </p>
+                                            <p><a href="${video.link}" target="_blank">${video.descricao} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8em; margin-left: 5px;"></i></a></p>
                                         </aside>
                                     </article>
                                 `;
@@ -144,11 +122,50 @@ async function carregarTudo() {
                         }
                     });
                 }
-            } else {
-                console.log("Arquivo videos.json não encontrado ou vazio.");
             }
         } catch (erro) {
             console.error("Erro ao carregar vídeos:", erro);
+        }
+    }
+
+    // --- PARTE C: CARREGAR SITES (sites.json) [NOVO] ---
+    const palcoSites = document.getElementById('palco-sites');
+    if (palcoSites) {
+        try {
+            const resSites = await fetch('sites.json');
+            if(resSites.ok) {
+                const dadosSites = await resSites.json();
+                if(dadosSites.lista_sites) {
+                    palcoSites.innerHTML = '';
+                    
+                    // Cria uma única seção galeria para colocar todos os sites
+                    const sectionGaleria = document.createElement('section');
+                    sectionGaleria.className = 'galeria';
+
+                    dadosSites.lista_sites.forEach(site => {
+                        const article = document.createElement('article');
+                        article.className = 'boximg'; // Classes do seu CSS original
+
+                        // Ajuste de imagem
+                        let caminhoImg = site.img;
+                        if (!caminhoImg.startsWith('http') && !caminhoImg.startsWith('./') && !caminhoImg.startsWith('/')) {
+                             caminhoImg = './' + caminhoImg;
+                        }
+
+                        article.innerHTML = `
+                            <img class="responsive-img" src="${caminhoImg}" alt="Preview do ${site.titulo}">
+                            <h3 class="subtitulo">${site.titulo}</h3>
+                            <p class="textodescri">${site.descricao}</p>
+                            <a href="${site.link}" target="_blank" class="btn-visitar">Visitar Site</a>
+                        `;
+                        sectionGaleria.appendChild(article);
+                    });
+
+                    palcoSites.appendChild(sectionGaleria);
+                }
+            }
+        } catch (erro) {
+            console.error("Erro ao carregar sites:", erro);
         }
     }
 }
